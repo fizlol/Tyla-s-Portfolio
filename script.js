@@ -4,38 +4,40 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ── Custom Cursor ──────────────────────────────────────────
+  // ── Custom Cursor (desktop only) ──────────────────────────
   const dot  = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0;
-  let ringX  = 0, ringY  = 0;
+  const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
+  if (!isTouchDevice) {
+    let mouseX = 0, mouseY = 0;
+    let ringX  = 0, ringY  = 0;
 
-  // Smooth ring follow
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateRing);
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      dot.style.left = mouseX + 'px';
+      dot.style.top  = mouseY + 'px';
+    });
+
+    function animateRing() {
+      ringX += (mouseX - ringX) * 0.12;
+      ringY += (mouseY - ringY) * 0.12;
+      ring.style.left = ringX + 'px';
+      ring.style.top  = ringY + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    document.addEventListener('mouseleave', () => {
+      dot.style.opacity = '0';
+      ring.style.opacity = '0';
+    });
+    document.addEventListener('mouseenter', () => {
+      dot.style.opacity = '1';
+      ring.style.opacity = '1';
+    });
   }
-  animateRing();
-
-  // Hide cursor when leaving window
-  document.addEventListener('mouseleave', () => {
-    dot.style.opacity = '0';
-    ring.style.opacity = '0';
-  });
-  document.addEventListener('mouseenter', () => {
-    dot.style.opacity = '1';
-    ring.style.opacity = '1';
-  });
 
   // ── Navbar Scroll Effect ───────────────────────────────────
   const nav = document.getElementById('mainNav');

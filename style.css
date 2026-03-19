@@ -680,37 +680,167 @@ footer {
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════════════ */
+
+/* ── Tablet: 992px and below ─────────────────────────────── */
 @media (max-width: 992px) {
   .stat-card-2 { display: none; }
   .fact-grid { grid-template-columns: 1fr; }
   .comp-row { grid-template-columns: 140px 1fr 40px; gap: 12px; }
+
+  /* About: stack photo + text vertically, center photo */
+  .about-photo-wrap { display: block; margin: 0 auto 40px; max-width: 400px; }
+  .about-photo { height: 420px; }
+  .stat-card-1 { bottom: -12px; right: -12px; }
+
+  /* Timeline: tighten */
+  .timeline { max-width: 100%; }
+
+  /* Projects: 2 col at tablet */
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Mobile landscape / small tablet: 768px and below ───── */
 @media (max-width: 768px) {
-  #mainNav { padding: 16px 24px; }
-  #mainNav.scrolled { padding: 12px 24px; }
+  /* Restore cursor to default on touch devices */
+  body { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+
+  /* Nav */
+  #mainNav { padding: 16px 20px; }
+  #mainNav.scrolled { padding: 12px 20px; }
   .nav-links { display: none; }
-  .hamburger { display: flex; }
+  .hamburger { display: flex; cursor: pointer; }
 
-  #hero { padding: 0 24px; }
-  section { padding: 80px 0; }
-  footer { padding: 24px; }
-  .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
+  /* Sections */
+  section { padding: 72px 0; }
+  .section-title { margin-bottom: 36px; }
 
-  .stat-card-1 { bottom: -10px; right: -10px; }
+  /* Hero */
+  #hero { padding: 0 20px; align-items: flex-start; padding-top: 0; }
+  .hero-inner { padding-top: 100px; padding-bottom: 60px; }
+  .hero-sub { font-size: 0.95rem; }
+  .ticker-wrap { max-width: 100%; }
+
+  /* About */
+  .about-photo-wrap { max-width: 100%; }
+  .about-photo { height: 340px; }
   .about-photo-accent { display: none; }
-  .about-photo { height: 380px; }
+  .stat-card-1 { bottom: -10px; right: -6px; padding: 12px 14px; }
+  .stat-num { font-size: 1.6rem; }
 
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .comp-row { grid-template-columns: 110px 1fr 38px; gap: 8px; }
+  .competency-bars { max-width: 100%; }
+
+  /* Projects: single col on mobile */
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card { padding: 28px 24px; }
+
+  /* Timeline */
+  .timeline { padding-left: 36px; }
+  .timeline::before { left: 12px; }
+  .timeline-item::before { left: -32px; }
+  .timeline-content { padding: 20px; }
+
+  /* Books */
+  .books-grid { grid-template-columns: 1fr; }
+
+  /* Philosophy */
+  #philosophy { padding: 72px 0; }
+  .philosophy-quote-mark { font-size: 5rem; }
+  .philosophy-inner { padding: 0 8px; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr 1fr; }
+  .contact-card { padding: 20px; }
   .form-row-custom { grid-template-columns: 1fr; }
-  .timeline { padding-left: 40px; }
+  .contact-form-wrap { max-width: 100%; }
 
-  .comp-row { grid-template-columns: 120px 1fr 40px; gap: 8px; }
+  /* Footer */
+  footer { padding: 24px 20px; }
+  .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
 
+/* ── Mobile portrait: 576px and below ────────────────────── */
 @media (max-width: 576px) {
-  .hero-name { font-size: clamp(3rem, 14vw, 5rem); }
-  .hero-cta { flex-direction: column; }
+  /* Nav */
+  #mainNav { padding: 14px 16px; }
+  #mainNav.scrolled { padding: 10px 16px; }
+
+  /* Hero */
+  #hero { padding: 0 16px; }
+  .hero-inner { padding-top: 90px; padding-bottom: 48px; }
+  .hero-name { font-size: clamp(3.2rem, 14vw, 5.5rem); line-height: 0.92; }
+  .hero-tag { font-size: 0.62rem; padding: 5px 10px; flex-wrap: wrap; }
+  .hero-sub { font-size: 0.88rem; margin-bottom: 28px; }
+  .hero-cta { flex-direction: column; gap: 10px; margin-bottom: 36px; }
   .btn-primary-custom, .btn-ghost-custom { width: 100%; justify-content: center; }
-  .section-title { font-size: clamp(2rem, 8vw, 3rem); margin-bottom: 36px; }
-  .skill-category { padding: 20px; }
+  .hero-scroll-hint { display: none; }
+
+  /* Sections */
+  section { padding: 60px 0; }
+  .section-title {
+    font-size: clamp(2rem, 9vw, 3rem);
+    margin-bottom: 28px;
+    line-height: 1.1;
+  }
+  .section-label { margin-bottom: 16px; }
+
+  /* About */
+  .about-photo { height: 280px; }
+  .stat-card-1 { display: none; } /* too cramped at tiny widths */
+  .about-text { font-size: 0.9rem; }
+  .fact-grid { grid-template-columns: 1fr; gap: 8px; }
+  .fact-item { font-size: 0.78rem; padding: 10px 12px; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-category { padding: 20px 16px; }
+  .comp-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+  .comp-label { margin-bottom: 4px; }
+  .comp-track { width: 100%; }
+  .comp-pct { text-align: left; }
+
+  /* Projects */
+  .project-card { padding: 24px 18px; }
+  .project-title { font-size: 1.35rem; }
+
+  /* Timeline */
+  .timeline { padding-left: 28px; }
+  .timeline::before { left: 8px; }
+  .timeline-item::before { left: -26px; width: 6px; height: 6px; top: 8px; }
+  .timeline-content { padding: 16px; }
+  .timeline-content h4 { font-size: 1.05rem; }
+  .timeline-date { font-size: 0.65rem; }
+
+  /* Books */
+  .book-info { padding: 20px 16px; }
+  .book-title { font-size: 1.2rem; }
+
+  /* Philosophy */
+  #philosophy { padding: 56px 0; }
+  .philosophy-quote { font-size: clamp(1.25rem, 5.5vw, 1.8rem); }
+  .philosophy-quote-mark { font-size: 4rem; }
+
+  /* Contact */
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .contact-card { padding: 16px 14px; gap: 8px; }
+  .contact-card i { font-size: 1.1rem; }
+
+  /* Mobile menu links slightly smaller */
+  .mobile-link { font-size: 2rem; }
+}
+
+/* ── Very small screens: 375px and below ─────────────────── */
+@media (max-width: 375px) {
+  .hero-name { font-size: clamp(2.8rem, 15vw, 4rem); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .mobile-link { font-size: 1.7rem; }
+  .book-title { font-size: 1.1rem; }
 }
