@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Al Fizrin — Fintech & CS</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise-overlay"></div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <div class="nav-logo">
+      <span class="mono">AF</span><!-- Replace initials -->
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link-item">About</a></li>
+      <li><a href="#skills" class="nav-link-item">Skills</a></li>
+      <li><a href="#projects" class="nav-link-item">Projects</a></li>
+      <li><a href="#achievements" class="nav-link-item">Awards</a></li>
+      <li><a href="#reading" class="nav-link-item">Reading</a></li>
+      <li><a href="#contact" class="nav-link-item">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#achievements" class="mobile-link">Awards</a></li>
+      <li><a href="#reading" class="mobile-link">Reading</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-tag mono reveal-up" style="--d:0s">
+        <span class="status-dot"></span> Available for University Intake 2026
+      </div>
+      <h1 class="hero-name reveal-up" style="--d:0.15s">
+        Al<br/><em>Fizrin.</em>
+      </h1>
+      <p class="hero-sub reveal-up" style="--d:0.3s">
+        Aspiring Fintech Engineer &amp; CS Student<br/>
+        <span class="mono light">Singapore</span>
+      </p>
+      <div class="hero-cta reveal-up" style="--d:0.45s">
+        <a href="#projects" class="btn-primary-custom">View My Work</a>
+        <a href="resume.pdf" target="_blank" class="btn-ghost-custom">
+          <i class="bi bi-file-earmark-arrow-down"></i> Resume
+        </a>
+      </div>
+      <!-- Ticker -->
+      <div class="ticker-wrap reveal-up" style="--d:0.6s">
+        <div class="ticker">
+          <span>Python &nbsp;·&nbsp;</span>
+          <span>Java &nbsp;·&nbsp;</span>
+          <span>Financial Modelling &nbsp;·&nbsp;</span>
+          <span>React &nbsp;·&nbsp;</span>
+          <span>SQL &nbsp;·&nbsp;</span>
+          <span>Blockchain &nbsp;·&nbsp;</span>
+          <span>Machine Learning &nbsp;·&nbsp;</span>
+          <span>UI/UX &nbsp;·&nbsp;</span>
+          <span>Data Structures &nbsp;·&nbsp;</span>
+          <span>Python &nbsp;·&nbsp;</span>
+          <span>Java &nbsp;·&nbsp;</span>
+          <span>Financial Modelling &nbsp;·&nbsp;</span>
+          <span>React &nbsp;·&nbsp;</span>
+          <span>SQL &nbsp;·&nbsp;</span>
+          <span>Blockchain &nbsp;·&nbsp;</span>
+          <span>Machine Learning &nbsp;·&nbsp;</span>
+          <span>UI/UX &nbsp;·&nbsp;</span>
+          <span>Data Structures &nbsp;·&nbsp;</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint mono">scroll ↓</div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section id="about">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="section-label mono reveal-up">01 / About</div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 reveal-up" style="--d:0.1s">
+          <div class="about-photo-wrap">
+            <div class="about-photo-frame">
+              <!-- Replace src with your actual photo -->
+              <img src="photo_6289518948730911367_x.jpg" alt="Al Fizrin" class="about-photo"/>
+            </div>
+            <div class="about-photo-accent"></div>
+            <!-- Floating stat cards -->
+            <div class="stat-card stat-card-1">
+              <span class="stat-num">3.4</span>
+              <span class="stat-label mono">GPA</span>
+            </div>
+            <div class="stat-card stat-card-2">
+              <span class="stat-num">5+</span>
+              <span class="stat-label mono">Projects</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal-up" style="--d:0.2s">
+          <h2 class="section-title">The person<br/><em>behind the code.</em></h2>
+          <p class="about-text">
+            I'm a driven 20-year-old from Singapore with a deep curiosity for how technology reshapes financial systems. Whether it's building algorithmic trading simulations or designing intuitive payment UIs, I sit at the intersection of logic and elegance.
+          </p>
+          <p class="about-text">
+            Beyond the screen, I believe the best engineers are well-rounded thinkers — so I read widely, debate fiercely, and ask uncomfortable questions. I'm applying to <strong>NUS / NTU</strong> to study Computer Science, with a long-term focus on Fintech innovation.
+          </p>
+          <!-- Fun / unique fact blocks -->
+          <div class="fact-grid">
+            <div class="fact-item">
+              <span class="fact-icon">📍</span>
+              <span>Jurong West, Singapore</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">🎓</span>
+              <span>Polytechnic 2026</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">☕</span>
+              <span>Kopi-O addict & early riser</span>
+            </div>
+            <div class="fact-item">
+              <span class="fact-icon">📖</span>
+              <span>Reading: <em>Flash Boys</em> – Michael Lewis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="section-label mono reveal-up">02 / Skills</div>
+      <h2 class="section-title reveal-up">What I bring<br/><em>to the table.</em></h2>
+
+      <div class="skills-grid reveal-up" style="--d:0.15s">
+
+        <div class="skill-category">
+          <div class="skill-cat-header mono">Languages</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">C++</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">HTML / CSS</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header mono">Frameworks & Tools</div>
+          <div class="skill-pills">
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">Bootstrap</span>
+            <span class="skill-pill">Pandas / NumPy</span>
+            <span class="skill-pill">Figma</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header mono">Fintech Concepts</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Financial Modelling</span>
+            <span class="skill-pill">Algorithmic Trading</span>
+            <span class="skill-pill">Blockchain Basics</span>
+            <span class="skill-pill">Risk Analysis</span>
+            <span class="skill-pill">Payment Systems</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header mono">Soft Skills</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Critical Thinking</span>
+            <span class="skill-pill">Public Speaking</span>
+            <span class="skill-pill">Research</span>
+            <span class="skill-pill">Team Leadership</span>
+            <span class="skill-pill">Problem Solving</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Competency bars — unique visual touch -->
+      <div class="competency-bars reveal-up" style="--d:0.25s">
+        <div class="comp-row" data-pct="88">
+          <span class="comp-label mono">Python</span>
+          <div class="comp-track"><div class="comp-fill"></div></div>
+          <span class="comp-pct mono">88%</span>
+        </div>
+        <div class="comp-row" data-pct="75">
+          <span class="comp-label mono">Java</span>
+          <div class="comp-track"><div class="comp-fill"></div></div>
+          <span class="comp-pct mono">75%</span>
+        </div>
+        <div class="comp-row" data-pct="70">
+          <span class="comp-label mono">Financial Modelling</span>
+          <div class="comp-track"><div class="comp-fill"></div></div>
+          <span class="comp-pct mono">70%</span>
+        </div>
+        <div class="comp-row" data-pct="80">
+          <span class="comp-label mono">React / JS</span>
+          <div class="comp-track"><div class="comp-fill"></div></div>
+          <span class="comp-pct mono">80%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PROJECTS
+  ═══════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="section-label mono reveal-up">03 / Projects</div>
+      <h2 class="section-title reveal-up">Things I've<br/><em>actually built.</em></h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal-up" style="--d:0.05s">
+          <div class="project-num mono">01</div>
+          <div class="project-tag mono">Python · ML · Finance</div>
+          <h3 class="project-title">StockSense Predictor</h3>
+          <p class="project-desc">A machine-learning model trained on SGX data to forecast short-term price movements using LSTM neural networks and sentiment analysis of financial news.</p>
+          <div class="project-links">
+            <a href="#" class="project-link mono"><i class="bi bi-github"></i> GitHub</a>
+            <a href="#" class="project-link mono"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:0.1s">
+          <div class="project-num mono">02</div>
+          <div class="project-tag mono">React · Node.js · Blockchain</div>
+          <h3 class="project-title">PayPeer — P2P Wallet</h3>
+          <p class="project-desc">A peer-to-peer digital wallet prototype with transaction logging on a local blockchain. Designed with a focus on UX clarity for first-time users of digital payments.</p>
+          <div class="project-links">
+            <a href="#" class="project-link mono"><i class="bi bi-github"></i> GitHub</a>
+            <a href="#" class="project-link mono"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up featured-project" style="--d:0.15s">
+          <div class="project-num mono">03</div>
+          <div class="project-tag mono">Python · SQL · Data Viz</div>
+          <div class="featured-badge mono">Featured</div>
+          <h3 class="project-title">SG Budget Visualiser</h3>
+          <p class="project-desc">An interactive dashboard that breaks down Singapore's national budget allocations from 2015–2024. Built to make fiscal policy accessible and understandable to students.</p>
+          <div class="project-links">
+            <a href="#" class="project-link mono"><i class="bi bi-github"></i> GitHub</a>
+            <a href="#" class="project-link mono"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal-up" style="--d:0.2s">
+          <div class="project-num mono">04</div>
+          <div class="project-tag mono">Java · OOP · Algorithms</div>
+          <h3 class="project-title">Portfolio Risk Engine</h3>
+          <p class="project-desc">A Java-based CLI tool that calculates VaR (Value at Risk) for a custom stock portfolio using Monte Carlo simulation. Submitted for school computing project.</p>
+          <div class="project-links">
+            <a href="#" class="project-link mono"><i class="bi bi-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ACHIEVEMENTS
+  ═══════════════════════════════════════ -->
+  <section id="achievements">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="section-label mono reveal-up">04 / Achievements</div>
+      <h2 class="section-title reveal-up">Milestones &amp;<br/><em>recognition.</em></h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up" style="--d:0.05s">
+          <div class="timeline-date mono">2024</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">🏆</div>
+            <h4>NUS FinHack Hackathon — Top 10</h4>
+            <p>Competed among 200+ participants. Built a micro-investment app for Gen Z targeting low-income households with round-up savings.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--d:0.1s">
+          <div class="timeline-date mono">2024</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">📜</div>
+            <h4>AWS Cloud Practitioner Certified</h4>
+            <p>Earned foundational cloud computing certification covering core AWS services, security, and architecture principles.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--d:0.15s">
+          <div class="timeline-date mono">2023</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">🎖️</div>
+            <h4>School Coding Olympiad — Silver</h4>
+            <p>Placed 2nd in school-level competitive programming contest. Solved 7 of 9 algorithmic problems within the time limit.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--d:0.2s">
+          <div class="timeline-date mono">2023</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">📊</div>
+            <h4>MAS Financial Literacy Ambassador</h4>
+            <p>Selected by the Monetary Authority of Singapore to conduct financial literacy workshops for secondary students across 3 schools.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" style="--d:0.25s">
+          <div class="timeline-date mono">2022</div>
+          <div class="timeline-content">
+            <div class="timeline-badge">🌏</div>
+            <h4>ASEAN Youth Leadership Exchange</h4>
+            <p>Represented Singapore in a regional youth leadership programme in Kuala Lumpur. Led team project on digital inclusion across ASEAN economies.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CURRENTLY READING — Unique Section
+  ═══════════════════════════════════════ -->
+  <section id="reading">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="section-label mono reveal-up">05 / Currently Reading</div>
+      <h2 class="section-title reveal-up">What's on<br/><em>my desk.</em></h2>
+      <p class="reading-intro reveal-up">I believe the best engineers read beyond textbooks. Here's what's shaping my thinking right now.</p>
+
+      <div class="books-grid reveal-up" style="--d:0.1s">
+
+        <div class="book-card">
+          <div class="book-spine" style="--spine-color:#c8a96e"></div>
+          <div class="book-info">
+            <div class="book-tag mono">Finance · Non-fiction</div>
+            <h4 class="book-title">Flash Boys</h4>
+            <p class="book-author mono">Michael Lewis</p>
+            <p class="book-note">Eye-opening on how HFT exploits market microstructure. Changed how I think about latency in trading systems.</p>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine" style="--spine-color:#7eafc8"></div>
+          <div class="book-info">
+            <div class="book-tag mono">CS · Philosophy</div>
+            <h4 class="book-title">Gödel, Escher, Bach</h4>
+            <p class="book-author mono">Douglas Hofstadter</p>
+            <p class="book-note">Dense but brilliant. Recursion, self-reference and formal systems through art, music and mathematics.</p>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine" style="--spine-color:#a8c87e"></div>
+          <div class="book-info">
+            <div class="book-tag mono">Product · Startups</div>
+            <h4 class="book-title">Zero to One</h4>
+            <p class="book-author mono">Peter Thiel</p>
+            <p class="book-note">Contrarian thinking applied to startups. Relevant to Singapore's ambition to build global-first fintech products.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PHILOSOPHY — Unique Section
+  ═══════════════════════════════════════ -->
+  <section id="philosophy">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="philosophy-inner reveal-up">
+        <div class="philosophy-quote-mark">"</div>
+        <blockquote class="philosophy-quote">
+          The best financial technology doesn't just move money faster —<br/>
+          <em>it redistributes opportunity.</em>
+        </blockquote>
+        <p class="philosophy-attr mono">— My design philosophy</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container-fluid px-4 px-md-5">
+      <div class="section-label mono reveal-up">06 / Contact</div>
+      <h2 class="section-title reveal-up">Let's<br/><em>connect.</em></h2>
+      <p class="contact-sub reveal-up">Open to university interviews, project collaborations, and internship conversations.</p>
+
+      <div class="contact-grid reveal-up" style="--d:0.1s">
+        <a href="mailto:your@email.com" class="contact-card">
+          <i class="bi bi-envelope"></i>
+          <span class="mono">your@email.com</span>
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-card">
+          <i class="bi bi-linkedin"></i>
+          <span class="mono">LinkedIn</span>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank" class="contact-card">
+          <i class="bi bi-github"></i>
+          <span class="mono">GitHub</span>
+        </a>
+        <a href="resume.pdf" target="_blank" class="contact-card">
+          <i class="bi bi-file-earmark-person"></i>
+          <span class="mono">Resume PDF</span>
+        </a>
+      </div>
+
+      <!-- Mini contact form -->
+      <div class="contact-form-wrap reveal-up" style="--d:0.2s">
+        <h4 class="mono form-heading">Send a message</h4>
+        <div class="contact-form">
+          <div class="form-row-custom">
+            <input type="text" class="form-input-custom" placeholder="Your name" id="fName"/>
+            <input type="email" class="form-input-custom" placeholder="Your email" id="fEmail"/>
+          </div>
+          <textarea class="form-input-custom form-textarea" placeholder="Your message..." id="fMsg" rows="4"></textarea>
+          <button class="btn-primary-custom" onclick="handleFormSubmit()">Send Message <i class="bi bi-arrow-right"></i></button>
+          <p class="form-note mono" id="formNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="mono">© 2025 Your Name · Built with intention.</span>
+      <span class="mono">Singapore 🇸🇬</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
